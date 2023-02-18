@@ -1,32 +1,39 @@
-# tricky dickies
-
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
+# THE BESTTTTTY [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
  
 ## Table of Contents
+- [Description](#description)
+  
+  
+- [Contribution Guidelines](#contribution-guidelines)
+  - [Built With](#built-with)
+  - [Test Instructions](#test-instructions)
+- [Author](#author)
+- [Contact](#contact)
+
+
 
 
 ## Description
-whatever
+lakdjfladkjfckladma  adkja ldjk ljfldkjfaldkjf ald ldj adlfdaoidjo  adkjfj ao  ijaidjf
 
 
-### Installation
-blah blah blah
 
- 
-### Usage
-more etc etc etc
 
-## Contribution Guidlines
+
+## Contribution Guidelines
+lkdjflkdjalf
 
 
 ### Built With
 HTML
 
+
 ### Test Instructions
+lsdvdlj
 
 ## Author
-// * github link, username, email address with questions directed to them
+- GitHub - [sophie_senge]()
+- Contact - sophieperks@gmail.com
 
 ### License
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

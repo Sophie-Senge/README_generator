@@ -2,7 +2,7 @@ import inquirer from 'inquirer';
 import fs from "fs/promises";
 
 
-let { projectTitle, description, installation, usage, license, builtWith, tests, questions, contribution } = await inquirer
+let { projectTitle, description, installation, usage, license, builtWith, tests, githubUser, githubLink, contact, contribution } = await inquirer
   .prompt([
 
     {
@@ -38,45 +38,75 @@ let { projectTitle, description, installation, usage, license, builtWith, tests,
       name: 'builtWith',
     },
     {
+      type: 'input',
+      name: 'tests',
+      message: "Enter your test instructions:  ",
+    },
+    {
+      type: 'input',
+      name: 'githubUser',
+      message: "Enter your gitHub username:  ",
+    },
+    {
+      type: 'input',
+      name: 'githubLink',
+      message: "Enter your gitHub url link:  ",
+    },
+    {
+      type: 'input',
+      name: 'contact',
+      message: "Enter your email address as alternative contact info:  ",
+    },
+    {
       type: 'list',
       name: 'license',
       message: 'Which license do you want?',
       choices: ['MIT', 'Apache', 'GNU GPL v3'],
-    }
+    },
+    
 
   ])
 let readmeText =
 
   
-  `# ${projectTitle}
-
-${generateLicense(license)}
-
+  `# ${projectTitle} ${generateLicense(license)}
  
 ## Table of Contents
+${description ? `- [Description](#description)` : ``}
+  ${installation ? `- [Installation Guide](#installation-guide)` : ``}
+  ${usage ? `- [Usage](#usage)`: ``}
+${contribution ? `- [Contribution Guidelines](#contribution-guidelines)` : ``}
+  ${builtWith ? `- [Built With](#built-with)` : ``}
+  ${tests ? `- [Test Instructions](#test-instructions)` : ``}
+${githubUser ? `- [Author](#author)` : ``}
+${contact ? `- [Contact](#contact)` : ``}
 
 
-## Description
-${description}
 
 
-### Installation
-${installation}
+${description ? `## Description
+${description}` : ``}
 
- 
-### Usage
-${usage}
+${installation ? `### Installation Guide
+${installation}` : ``}
 
-## Contribution Guidlines
-${contribution}
+${usage ? `### Usage
+${usage}` : ``}
 
-### Built With
-${builtWith}
+${contribution ? `## Contribution Guidelines
+${contribution}` : ``}
 
-### Test Instructions
+
+${builtWith ? `### Built With
+${builtWith}` : ``}
+
+
+${tests ? `### Test Instructions
+${tests}` : ``}
 
 ## Author
-// * github link, username, email address with questions directed to them
+- GitHub - [${githubUser}](${githubLink})
+${contact ? `- Contact - ${contact}` : ``}
 
 ### License
 ${generateLicense(license)}
@@ -100,17 +130,13 @@ function generateLicense(license) {
       badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
   }
 return badge;
-  // if (license === "gnu v3"){
-  //   return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
-  // }
-  // else if (license === "mit"){
-  //   return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-  // }
-  // else if (license === "apache"){
-  //   return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
-  // }
 
 }
+
+// function tableOfContents(included){
+// return (included ?  : ``)
+// return 
+// }
 
 
 
