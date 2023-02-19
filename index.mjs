@@ -68,15 +68,17 @@ let { projectTitle, description, installation, usage, license, builtWith, tests,
 let readmeText =
 
   
-  `# ${projectTitle} ${generateLicense(license)}
+  ` <h1 align="center">${projectTitle}</h1> 
+
+  <p align="center">${generateLicense(license)}</p>
 
  
   ${description ? `## Description
-  ${'```'}
-  ${description}
-  ${'```'}` : ``}
+ ***
+  < ${description}` : ``}
  
 ## Table of Contents
+***
 ${description ? `- [Description](#description)` : ``}
 ${installation ? `- [Installation Guide](#installation-guide)` : ``}
   ${usage ? `- [Usage](#usage)`: ``}
@@ -88,25 +90,34 @@ ${contact ? `- [Contact](#contact)` : ``}
 
 
 ${installation ? `## Installation Guide
+***
 ${installation}` : ``}
 
 ${usage ? `### Usage
+#
 ${usage}` : ``}
 
 ${tests ? `### Test Instructions
+#
 ${tests}` : ``}
 
 ${contribution ? `### Contribution Guidelines
+#
 ${contribution}` : ``}
 
 ${builtWith ? `## Built With
-${builtWith}` : ``}
+***
+${'```'}
+${builtWith}
+${'```'}` : ``}
 
 ## Author
+***
 - GitHub - [${githubUser}](${githubLink})
 ${contact ? `- Contact me with any questions! - ${contact}` : ``}
 
 ### License
+#
 ${generateLicense(license)}
 
 `
@@ -117,13 +128,16 @@ function generateLicense(license) {
   let badge;
   switch (license) {
     case "MIT":
-      badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+      badge = `<a href= "https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/></a>`
       break;
     case "GNU GPL v3":
-      badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+      badge = `<a href= "https://www.gnu.org/licenses/gpl-3.0">
+      <img src= "https://img.shields.io/badge/License-GPLv3-blue.svg"/></a>`
       break;
     case "Apache":
-      badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+      badge = `<a href= "https://opensource.org/licenses/Apache-2.0">
+      <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a>`
   }
 return badge;
 
