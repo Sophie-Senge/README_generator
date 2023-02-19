@@ -4,32 +4,31 @@ import fs from "fs/promises";
 
 let { projectTitle, description, installation, usage, license, builtWith, tests, githubUser, githubLink, contact, contribution } = await inquirer
   .prompt([
-
     {
       type: 'input',
       name: 'projectTitle',
-      message: "Please enter the name of your project: ",
+      message: "Enter the name of your project: ",
     },
     {
       type: 'input',
       name: 'description',
-      message: "Please enter a brief description of your project: ",
+      message: "Enter a brief description of your project: (leave blank to skip) ",
     },
    
     {
       type: 'input',
       name: 'installation',
-      message: "Enter your installation details:  ",
+      message: "Enter your installation details:(leave blank to skip)  ",
     },
     {
       type: 'input',
       name: 'usage',
-      message: "Enter your usage information:  ",
+      message: "Enter your usage information:(leave blank to skip)  ",
     },
     {
       type: 'input',
       name: 'contribution',
-      message: "Enter your contribution guidelines:  ",
+      message: "Enter your contribution guidelines: (leave blank to skip) ",
     },
     {
       type: 'checkbox',
@@ -40,7 +39,7 @@ let { projectTitle, description, installation, usage, license, builtWith, tests,
     {
       type: 'input',
       name: 'tests',
-      message: "Enter your test instructions:  ",
+      message: "Enter your test instructions: (leave blank to skip) ",
     },
     {
       type: 'input',
@@ -55,7 +54,7 @@ let { projectTitle, description, installation, usage, license, builtWith, tests,
     {
       type: 'input',
       name: 'contact',
-      message: "Enter your email address as alternative contact info:  ",
+      message: "Enter your email address as an alternative contact info: (leave blank to skip) ",
     },
     {
       type: 'list',
@@ -70,50 +69,47 @@ let readmeText =
 
   
   `# ${projectTitle} ${generateLicense(license)}
+
+ 
+  ${description ? `## Description
+  ${'```'}
+  ${description}
+  ${'```'}` : ``}
  
 ## Table of Contents
 ${description ? `- [Description](#description)` : ``}
-  ${installation ? `- [Installation Guide](#installation-guide)` : ``}
+${installation ? `- [Installation Guide](#installation-guide)` : ``}
   ${usage ? `- [Usage](#usage)`: ``}
-${contribution ? `- [Contribution Guidelines](#contribution-guidelines)` : ``}
-  ${builtWith ? `- [Built With](#built-with)` : ``}
   ${tests ? `- [Test Instructions](#test-instructions)` : ``}
+  ${contribution ? `- [Contribution Guidelines](#contribution-guidelines)` : ``}
+${builtWith ? `- [Built With](#built-with)` : ``}
 ${githubUser ? `- [Author](#author)` : ``}
 ${contact ? `- [Contact](#contact)` : ``}
 
 
-
-
-${description ? `## Description
-${description}` : ``}
-
-${installation ? `### Installation Guide
+${installation ? `## Installation Guide
 ${installation}` : ``}
 
 ${usage ? `### Usage
 ${usage}` : ``}
 
-${contribution ? `## Contribution Guidelines
-${contribution}` : ``}
-
-
-${builtWith ? `### Built With
-${builtWith}` : ``}
-
-
 ${tests ? `### Test Instructions
 ${tests}` : ``}
 
+${contribution ? `### Contribution Guidelines
+${contribution}` : ``}
+
+${builtWith ? `## Built With
+${builtWith}` : ``}
+
 ## Author
 - GitHub - [${githubUser}](${githubLink})
-${contact ? `- Contact - ${contact}` : ``}
+${contact ? `- Contact me with any questions! - ${contact}` : ``}
 
 ### License
 ${generateLicense(license)}
 
 `
-
-
 
 
 
@@ -133,10 +129,6 @@ return badge;
 
 }
 
-// function tableOfContents(included){
-// return (included ?  : ``)
-// return 
-// }
 
 
 
