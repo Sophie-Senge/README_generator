@@ -1,19 +1,19 @@
- <h1 align="center">LILILa</h1> 
-
-  <p align="center"><a href= "https://opensource.org/licenses/Apache-2.0">
-      <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a></p>
+<h1 align="center">KJSDLKAJD</h1> 
+  
+<p align="center"><a href= "https://opensource.org/licenses/Apache-2.0">
+        <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a></p>
 
  
-  ## Description
- ***
-  < kajdfh kjh jhd jahdkjhd  akdjh adjhdakjh adjh
+## Description
+ #
+  > lkdjlkfj
  
 ## Table of Contents
 ***
 - [Description](#description)
 - [Installation Guide](#installation-guide)
   - [Usage](#usage)
-  
+  - [Test Instructions](#test-instructions)
   - [Contribution Guidelines](#contribution-guidelines)
 - [Built With](#built-with)
 - [Author](#author)
@@ -21,32 +21,40 @@
 
 
 ## Installation Guide
-***
-kjsdkfhsd
+#
+*Steps required to install project and how to get the development environment running:*
+lkjsljs
 
 ### Usage
+*Instructions and examples for use:*
+lkjlkjdfa
+
+### Test Instructions
+*Tests for application and how to run them:*
+d
+
+## Contribution Guidelines
 #
-sdfksdhf
-
-
-
-### Contribution Guidelines
-#
-sdfkdsd
+*If you would like to contribute it, you can follow these guidelines for how to do so.*
+lkajfjaf
 
 ## Built With
-***
+#
 ```
-CSS
+* HTML5
+* CSS
+* React
+* Angular
+* JQuery
+
 ```
 
 ## Author
 ***
-- GitHub - [dsdfsd](sdfsdsf)
-- Contact me with any questions! - sdfsdf
+- GitHub - [sophie_senge](https://www.github.com/sophie_senge)
+- Contact me with any questions! - sophieperks@gmail.com
 
 ### License
 #
 <a href= "https://opensource.org/licenses/Apache-2.0">
-      <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a>
-
+        <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a>

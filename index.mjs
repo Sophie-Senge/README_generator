@@ -1,84 +1,19 @@
 import inquirer from 'inquirer';
 import fs from "fs/promises";
+import { helper } from './utils/helper.mjs';
+let { projectTitle, description, installation, usage, license, builtWith, tests, githubUser, githubLink, contact, contribution } = await inquirer.prompt(helper.questions)
 
-
-let { projectTitle, description, installation, usage, license, builtWith, tests, githubUser, githubLink, contact, contribution } = await inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'projectTitle',
-      message: "Enter the name of your project: ",
-    },
-    {
-      type: 'input',
-      name: 'description',
-      message: "Enter a brief description of your project: (leave blank to skip) ",
-    },
-   
-    {
-      type: 'input',
-      name: 'installation',
-      message: "Enter your installation details:(leave blank to skip)  ",
-    },
-    {
-      type: 'input',
-      name: 'usage',
-      message: "Enter your usage information:(leave blank to skip)  ",
-    },
-    {
-      type: 'input',
-      name: 'contribution',
-      message: "Enter your contribution guidelines: (leave blank to skip) ",
-    },
-    {
-      type: 'checkbox',
-      message: 'What is your project built with?',
-      choices: ['HTML', 'CSS', 'JavaScript'],
-      name: 'builtWith',
-    },
-    {
-      type: 'input',
-      name: 'tests',
-      message: "Enter your test instructions: (leave blank to skip) ",
-    },
-    {
-      type: 'input',
-      name: 'githubUser',
-      message: "Enter your gitHub username:  ",
-    },
-    {
-      type: 'input',
-      name: 'githubLink',
-      message: "Enter your gitHub url link:  ",
-    },
-    {
-      type: 'input',
-      name: 'contact',
-      message: "Enter your email address as an alternative contact info: (leave blank to skip) ",
-    },
-    {
-      type: 'list',
-      name: 'license',
-      message: 'Which license do you want?',
-      choices: ['MIT', 'Apache', 'GNU GPL v3'],
-    },
-    
-
-  ])
-let readmeText =
-
+let readmeText =`<h1 align="center">${projectTitle}</h1> 
   
-  ` <h1 align="center">${projectTitle}</h1> 
-
-  <p align="center">${generateLicense(license)}</p>
+<p align="center">${helper.makeLicense(license)}</p>
 
  
-  ${description ? `## Description
- ***
-  < ${description}` : ``}
+${description ? `## Description
+ #
+  > ${description}` : ``}
  
 ## Table of Contents
-***
+#
 ${description ? `- [Description](#description)` : ``}
 ${installation ? `- [Installation Guide](#installation-guide)` : ``}
   ${usage ? `- [Usage](#usage)`: ``}
@@ -90,73 +25,36 @@ ${contact ? `- [Contact](#contact)` : ``}
 
 
 ${installation ? `## Installation Guide
-***
+#
+*Steps required to install project and how to get the development environment running:*
 ${installation}` : ``}
 
 ${usage ? `### Usage
-#
+*Instructions and examples for use:*
 ${usage}` : ``}
 
 ${tests ? `### Test Instructions
-#
+*Tests for application and how to run them:*
 ${tests}` : ``}
 
-${contribution ? `### Contribution Guidelines
+${contribution ? `## Contribution Guidelines
 #
+*If you would like to contribute it, you can follow these guidelines for how to do so.*
 ${contribution}` : ``}
 
 ${builtWith ? `## Built With
-***
+#
 ${'```'}
-${builtWith}
+${helper.makeList(builtWith)}
 ${'```'}` : ``}
 
 ## Author
-***
-- GitHub - [${githubUser}](${githubLink})
+#
+- GitHub - [${githubUser}](https://www.github.com/${githubUser})
 ${contact ? `- Contact me with any questions! - ${contact}` : ``}
 
 ### License
 #
-${generateLicense(license)}
-
+${helper.makeLicense(license)}
 `
-
-
-
-function generateLicense(license) {
-  let badge;
-  switch (license) {
-    case "MIT":
-      badge = `<a href= "https://opensource.org/licenses/MIT">
-      <img src="https://img.shields.io/badge/License-MIT-yellow.svg"/></a>`
-      break;
-    case "GNU GPL v3":
-      badge = `<a href= "https://www.gnu.org/licenses/gpl-3.0">
-      <img src= "https://img.shields.io/badge/License-GPLv3-blue.svg"/></a>`
-      break;
-    case "Apache":
-      badge = `<a href= "https://opensource.org/licenses/Apache-2.0">
-      <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a>`
-  }
-return badge;
-
-}
-
-
-
-
-
 fs.writeFile("README.md", readmeText);
-
-
-// * License 
-// * Contributing 
-// * Tests 
-// * Questions
-// GitHub username, with a link to their GitHub profile
- //   email address with instructions on how to reach them with additional questions
-
-
-
-
