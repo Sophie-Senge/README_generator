@@ -20,7 +20,7 @@ Answer the prompts in your command line according to what you want to include in
 
 ### Usage
 
-![Alt Text](../README_generator/assets/github%20readme%20vid.gif)
+![Alt Text](./assets/github%20readme%20vid.gif)
 
 ## Author
 #
