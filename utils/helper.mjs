@@ -1,8 +1,8 @@
 export const helper = {
   makeList(array){
-    var list = ""
+    let list = ""
     for(const element of array){
-      list += `* ${element}\n`
+      list += `- ${element}\n`
     }
     return list
   },
@@ -34,12 +34,12 @@ export const helper = {
     {
       type: 'input',
       name: 'installation',
-      message: "Enter your installation details:(leave blank to skip)  ",
+      message: "Enter your installation details: (leave blank to skip)  ",
     },
     {
       type: 'input',
       name: 'usage',
-      message: "Enter your usage information:(leave blank to skip)  ",
+      message: "Enter your usage information: (leave blank to skip)  ",
     },
     {
       type: 'input',
@@ -49,7 +49,7 @@ export const helper = {
     {
       type: 'checkbox',
       message: 'What is your project built with?',
-      choices: ['HTML5', 'CSS', 'React', 'Angular', 'JQuery', 'Next.js', 'JavaScript', 'Swift', 'Python', 'Ruby', 'Java', 'PHP'],
+      choices: ['HTML5', 'CSS', 'React', 'Angular', 'JQuery', 'Next.js', 'JavaScript', 'Swift', 'Python', 'Ruby', 'Java'],
       name: 'builtWith',
     },
     {
@@ -65,7 +65,7 @@ export const helper = {
     {
       type: 'input',
       name: 'contact',
-      message: "Enter your email address as an alternative contact info: (leave blank to skip) ",
+      message: "Enter your email address as an alternative contact: (leave blank to skip) ",
     },
     {
       type: 'list',

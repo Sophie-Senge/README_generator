@@ -1,60 +1,28 @@
-<h1 align="center">KJSDLKAJD</h1> 
+<h1 align="center">README Generator</h1> 
   
-<p align="center"><a href= "https://opensource.org/licenses/Apache-2.0">
-        <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a></p>
 
- 
 ## Description
  #
-  > lkdjlkfj
+Every project needs a quality README with information about the app - what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions so that other developers are more likely to use and contribute to the success of the project.
+
+This is a command-line application that runs with Node.js that dynamically generates a README.md file based on input about your project.
  
-## Table of Contents
-***
-- [Description](#description)
-- [Installation Guide](#installation-guide)
-  - [Usage](#usage)
-  - [Test Instructions](#test-instructions)
-  - [Contribution Guidelines](#contribution-guidelines)
-- [Built With](#built-with)
-- [Author](#author)
-- [Contact](#contact)
-
-
-## Installation Guide
+## Installation
 #
-*Steps required to install project and how to get the development environment running:*
-lkjsljs
+
+To generate your own README.md git clone the repo down to your local computer so you have the Node project.
+
+Run npm i inquirer in order to install package.json
+
+the application will start by running node index.mjs.
+
+Answer the prompts in your command line according to what you want to include in your README file.
 
 ### Usage
-*Instructions and examples for use:*
-lkjlkjdfa
 
-### Test Instructions
-*Tests for application and how to run them:*
-d
-
-## Contribution Guidelines
-#
-*If you would like to contribute it, you can follow these guidelines for how to do so.*
-lkajfjaf
-
-## Built With
-#
-```
-* HTML5
-* CSS
-* React
-* Angular
-* JQuery
-
-```
+![Alt Text](../README_generator/assets/github%20readme%20vid.gif)
 
 ## Author
-***
-- GitHub - [sophie_senge](https://www.github.com/sophie_senge)
-- Contact me with any questions! - sophieperks@gmail.com
-
-### License
 #
-<a href= "https://opensource.org/licenses/Apache-2.0">
-        <img src= "https://img.shields.io/badge/License-Apache_2.0-blue.svg"/></a>
+- GitHub - [Sophie-senge](https://github.com/Sophie-senge)
+
