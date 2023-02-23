@@ -11,10 +11,16 @@ This is a command-line application that runs with Node.js that dynamically gener
 #
 
 To generate your own README.md git clone the repo down to your local computer so you have the Node project.
+Run
+```
+npm init -y
+npm i inquirer 
+ ```
 
-Run npm i inquirer in order to install package.json
-
-the application will start by running node index.mjs.
+the application will start by running 
+```
+node index.mjs.
+```
 
 Answer the prompts in your command line according to what you want to include in your README file.
 
