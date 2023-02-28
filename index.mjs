@@ -56,4 +56,4 @@ ${contact ? `- Contact me with any questions! - ${contact}` : ``}
 #
 ${helper.makeLicense(license)}
 `
-fs.writeFile("README.md", readmeText);
+fs.writeFile("READMEnew.md", readmeText);

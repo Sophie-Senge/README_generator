@@ -25,8 +25,8 @@ node index.mjs.
 Answer the prompts in your command line according to what you want to include in your README file.
 
 ### Usage
+Link to full video (https://drive.google.com/file/d/1X20Zdd98p1-Vq3pkAsOQal-Nv01UAaJh/view)
 
-![Alt Text](./assets/github%20readme%20vid.gif)
 
 ## Author
 #
