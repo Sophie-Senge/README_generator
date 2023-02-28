@@ -22,7 +22,7 @@ the application will start by running
 node index.mjs.
 ```
 
-Answer the prompts in your command line according to what you want to include in your README file.
+Answer the prompts in your command line according to what you want to include in your README file. If you leave a section blank it won't be listed in the table of contents section.
 
 ### Usage
 Link to full video (https://drive.google.com/file/d/1X20Zdd98p1-Vq3pkAsOQal-Nv01UAaJh/view)
